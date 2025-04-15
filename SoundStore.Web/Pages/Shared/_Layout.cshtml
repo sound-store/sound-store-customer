@@ -10,17 +10,20 @@
     @* Bootstrap icon *@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    
+<body class="d-flex flex-column min-vh-100">
+
     @* Header section *@
     @await Html.PartialAsync("_Header")
 
-    <div class="container">
+
+    <div class="container flex-fill">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    @* Footer section *@
+    @await Html.PartialAsync("_Footer")
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
