@@ -1,0 +1,42 @@
+﻿/* _Header.cshtml.css */
+
+/* Style tổng quát cho header */
+header nav.navbar {
+    min-height: 80px;
+}
+
+/* Logo (nếu là text) */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #222; /* tuỳ chỉnh màu */
+}
+
+/* Nav link (text uppercase) */
+.nav-link {
+    color: #444 !important; /* !important để override nếu Bootstrap có quy định khác */
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+/* Dropdown menu tuỳ biến */
+.dropdown-menu {
+    min-width: 150px;
+}
+
+/* Độ rộng icon */
+.nav-link .bi {
+    font-size: 1.2rem;
+}
+
+/* Khoảng cách giữa các icon */
+.navbar-nav.ms-auto .nav-item {
+    margin-left: 15px; /* Khoảng cách giữa các icon */
+}
+
+/* Khoảng cách giữa các dropdown-item */
+.dropdown-item {
+    margin: 5px 0; /* Tùy chỉnh khoảng cách giữa các mục trong dropdown */
+}
