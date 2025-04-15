@@ -2,7 +2,7 @@
 
 /* Style tổng quát cho header */
 header nav.navbar {
-    min-height: 80px;
+    max-height: 75px;
 }
 
 /* Logo (nếu là text) */
@@ -39,4 +39,9 @@ header nav.navbar {
 /* Khoảng cách giữa các dropdown-item */
 .dropdown-item {
     margin: 5px 0; /* Tùy chỉnh khoảng cách giữa các mục trong dropdown */
+}
+
+.navbar-brand img {
+    transform: scale(1.2); /* Phóng to 20% */
+    transform-origin: left center; /* Đặt điểm phóng to nếu cần */
 }
