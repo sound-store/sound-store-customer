@@ -4,7 +4,54 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    #billboard .swiper-button-next,
+    #billboard .swiper-button-prev {
+        color: #ccc;
+        width: 48px;
+        height: 48px;
+    }
+</style>
+
+@* BILLBOARD SECTION *@
+<section id="billboard" class="position-relative overflow-hidden bg-black vh-100">
+    <div class="swiper main-swiper w-100 h-100">
+        <div class="swiper-wrapper h-100">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide position-relative w-100 h-100">
+                <img src="https://soundway.vn/wp-content/uploads/2024/12/topbanner-marshall-1-scaled.webp"
+                     class="img-fluid w-100 h-100 object-fit-cover" alt="Slide 1" style="object-fit: cover;" />
+
+                <!-- Link BUY NOW bên dưới ảnh -->
+                @* <div class="position-absolute start-50 translate-middle-x" style="bottom: 2rem;"> *@
+                @*     <a asp-page="/Shop" class="text-white text-uppercase fw-semibold text-decoration-none fs-5">Buy Now</a> *@
+                @* </div> *@
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide w-100 h-100 d-flex justify-content-center align-items-center bg-black">
+                <img src="https://soundway.vn/wp-content/uploads/2024/12/bring-sound-on-the-way-scaled.webp"
+                     class="img-fluid" alt="Slide 2"
+                     style="max-height: 100vh; width: 100%; height: auto; object-fit: contain;" />
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+@* CLICK ACTION ON SLIDER *@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper('.main-swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+</script>
