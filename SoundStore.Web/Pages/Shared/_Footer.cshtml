@@ -1,69 +1,110 @@
-﻿@* Views/Shared/_Footer.cshtml *@
-<footer class="text-white py-5" style="background-color:black">
+﻿<footer id="footer" class="overflow-hidden">
     <div class="container">
         <div class="row">
-            <!-- Column 1: Sound Way -->
-            <div class="col-md-3 mb-4">
-                <h3 class="h5 text-uppercase">Sound Store</h3>
-                <p class="small text-muted">
-                    Đại lý phân phối chính hãng Marshall tại Việt Nam
-                </p>
+            <div class="footer-top-area">
+                <div class="row d-flex flex-wrap justify-content-between">
+                    <div class="col-lg-3 col-sm-6 pb-3">
+                        <div class="footer-menu">
+                            <img src="images/main-logo.png" alt="logo">
+                            <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+                            <div class="social-links">
+                                <ul class="d-flex list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <svg class="facebook">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="instagram">
+                                                <use xlink:href="#instagram" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="twitter">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="linkedin">
+                                                <use xlink:href="#linkedin" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg class="youtube">
+                                                <use xlink:href="#youtube" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 pb-3">
+                        <div class="footer-menu text-uppercase">
+                            <h5 class="widget-title pb-2">Quick Links</h5>
+                            <ul class="menu-list list-unstyled text-uppercase">
+                                <li class="menu-item pb-2">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Blogs</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 pb-3">
+                        <div class="footer-menu text-uppercase">
+                            <h5 class="widget-title pb-2">Help & Info Help</h5>
+                            <ul class="menu-list list-unstyled">
+                                <li class="menu-item pb-2">
+                                    <a href="#">Track Your Order</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Returns Policies</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Shipping + Delivery</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li class="menu-item pb-2">
+                                    <a href="#">Faqs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 pb-3">
+                        <div class="footer-menu contact-item">
+                            <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+                            <p>
+                                Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
+                            </p>
+                            <p>
+                                If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Column 2: Liên Hệ -->
-            <div class="col-md-3 mb-4">
-                <h3 class="h5 text-uppercase">Liên Hệ</h3>
-                <ul class="list-unstyled small text-muted">
-                    <li>Email: info@soundstore.vn</li>
-                    <li>Hotline: 1900 1234</li>
-                    <li>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</li>
-                </ul>
-            </div>
-            <!-- Column 3: Sản Phẩm -->
-            <div class="col-md-3 mb-4">
-                <h3 class="h5 text-uppercase">Sản Phẩm</h3>
-                <ul class="list-unstyled small">
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Loa Marshall
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Tai Nghe Marshall
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Phụ Kiện
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Column 4: Chính Sách -->
-            <div class="col-md-3 mb-4">
-                <h3 class="h5 text-uppercase">Chính Sách</h3>
-                <ul class="list-unstyled small">
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Chính sách bảo hành
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Chính sách vận chuyển
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-decoration-none text-muted">
-                            Chính sách đổi trả
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="mt-4 border-top border-secondary pt-3 text-center small text-muted">
-            <p>© 2025 Sound Store. All rights reserved.</p>
         </div>
     </div>
 </footer>

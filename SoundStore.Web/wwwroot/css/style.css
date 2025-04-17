@@ -716,7 +716,20 @@ h3.cart-title {
         display: none;
     }
 }
+/* Bọc logo để giới hạn khung */
+.logo-wrapper {
+    height: 50px; /* giữ navbar mỏng */
+    overflow: hidden; /* phần dư logo không hiển thị */
+    display: flex;
+    align-items: center; /* căn giữa theo chiều dọc */
+}
 
+/* Logo vẫn được load ở kích thước lớn */
+.logo-img {
+    height: 75px; /* hình ảnh to, sắc nét */
+    width: auto;
+    object-fit: contain;
+}
 
 /* 2. Billboard
 /*----------------------------------------------*/

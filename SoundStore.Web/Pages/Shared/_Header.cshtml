@@ -1,67 +1,40 @@
-﻿<header id="header" class="site-header header-scrolled position-fixed text-black bg-light w-100 z-3">
+﻿<header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
     <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
         <div class="container-fluid">
-            <!-- Logo chính -->
-            <a class="navbar-brand d-flex align-items-center" asp-page="/Index">
-                <img src="~/img/logo-with-name.png" alt="SoundStore"
-                     class="img-fluid" style="max-height: 100px;" />
+            <a class="navbar-brand logo-wrapper d-flex align-items-center" asp-page="/Index">
+                <img src="~/img/logo-with-name.png" class="logo-img" alt="SoundStore Logo">
             </a>
 
-            <!-- Toggle button (mobile) -->
-            <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <svg class="navbar-icon">
                     <use xlink:href="#navbar-icon"></use>
                 </svg>
             </button>
-
-            <!-- Offcanvas (menu mobile) -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
                 <div class="offcanvas-header px-4 pb-0">
-                    <a class="navbar-brand" asp-page="/Index">
-                        <img src="~/images/main-logo.png" class="img-fluid" style="max-height: 40px;" alt="Logo" />
+                    <a class="navbar-brand logo-wrapper d-flex align-items-center" asp-page="/Index">
+                        <img src="~/img/logo-with-name.png" class="logo-img" alt="SoundStore Logo">
                     </a>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
                 </div>
-
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
-                        <!-- Dropdown LOA MARSHALL -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle me-4" href="#" id="loaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                LOA MARSHALL
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="loaDropdown">
-                                <li><a class="dropdown-item" href="#">LOA DI ĐỘNG</a></li>
-                                <li><a class="dropdown-item" href="#">LOA NGHE TRONG NHÀ</a></li>
-                                <li><a class="dropdown-item" href="#">LIMITED EDITION</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Dropdown TAI NGHE MARSHALL -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle me-4" href="#" id="taiNgheDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                TAI NGHE MARSHALL
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="taiNgheDropdown">
-                                <li><a class="dropdown-item" href="#">TRUE WIRELESS</a></li>
-                                <li><a class="dropdown-item" href="#">ON-EAR</a></li>
-                                <li><a class="dropdown-item" href="#">OVER-EAR</a></li>
-                                <li><a class="dropdown-item" href="#">IN-EAR</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Static links -->
+                    <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link me-4" href="#phu-kien-lifestyle">PHỤ KIỆN LIFESTYLE</a>
+                            <a class="nav-link me-4 active" href="#">LOA MARSHALL</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-4" href="#blog">BLOG</a>
+                            <a class="nav-link me-4" href="#">TAI NGHE MARSHALL</a>
                         </li>
-
-                        <!-- Icons -->
+                        <li class="nav-item">
+                            <a class="nav-link me-4" href="#">PHỤ KIỆN LIFESTYLE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link me-4" href="#">Blog</a>
+                        </li>
                         <li class="nav-item">
                             <div class="user-items ps-5">
-                                <ul class="d-flex justify-content-end list-unstyled mb-0">
+                                <ul class="d-flex justify-content-end list-unstyled">
                                     <li class="search-item pe-3">
                                         <a href="#" class="search-button">
                                             <svg class="search">
@@ -77,7 +50,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-page="/Cart">
+                                        <a href="cart.html">
                                             <svg class="cart">
                                                 <use xlink:href="#cart"></use>
                                             </svg>
