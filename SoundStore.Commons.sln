@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundStore.Commons", "SoundStore.Commons\SoundStore.Commons.csproj", "{BA12D98C-51F8-A84D-6601-B3294029C737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundStore.Web", "SoundStore.Web\SoundStore.Web.csproj", "{68CBE00C-AF0E-4D58-9E23-25678BEF9EA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA12D98C-51F8-A84D-6601-B3294029C737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA12D98C-51F8-A84D-6601-B3294029C737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA12D98C-51F8-A84D-6601-B3294029C737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA12D98C-51F8-A84D-6601-B3294029C737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CBE00C-AF0E-4D58-9E23-25678BEF9EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CBE00C-AF0E-4D58-9E23-25678BEF9EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CBE00C-AF0E-4D58-9E23-25678BEF9EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CBE00C-AF0E-4D58-9E23-25678BEF9EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E159F38-678D-472D-92BA-6FA5BB3AE129}
+	EndGlobalSection
+EndGlobal
