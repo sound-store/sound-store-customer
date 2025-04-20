@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Shared\Views\" />
     <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoundStore.Commons\SoundStore.Commons.csproj" />
   </ItemGroup>
 
 </Project>

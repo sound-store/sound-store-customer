@@ -60,9 +60,10 @@
 
         var swiper = new Swiper(".main-swiper", {
             speed: 500,
+            loop: true, // 🔁 Cho phép vòng lặp vô hạn
             navigation: {
-                nextEl: ".swiper-arrow-prev",
-                prevEl: ".swiper-arrow-next",
+                nextEl: ".swiper-arrow-next", // → Nút phải
+                prevEl: ".swiper-arrow-prev", // ← Nút trái
             },
         });
 

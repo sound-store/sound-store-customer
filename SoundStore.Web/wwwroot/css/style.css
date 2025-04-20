@@ -734,6 +734,22 @@ h3.cart-title {
 /* 2. Billboard
 /*----------------------------------------------*/
 /*------------Swiper Arrow -----------*/
+/* 1) Ép .image-holder giữ tỉ lệ 1905/1079 ≈ 1.766 */
+/* (nếu trình duyệt hỗ trợ) */
+.swiper-slide .image-holder {
+    width: 100%;
+    aspect-ratio: 1905 / 1079;
+    overflow: hidden;
+}
+
+    /* 2) Cho img fill đầy khung vuông đã ép tỉ lệ */
+.swiper-slide .image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 #billboard .swiper-arrow {
     position: absolute;
     top: 0;
@@ -774,6 +790,18 @@ h3.cart-title {
         top: 400px;
     }
 }
+
+#billboard {
+    padding-top: 75px; /* đảm bảo không bị header đè */
+}
+
+#billboard .image-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 
 /* 3. Icon Box - Company Services
 /*----------------------------------------------*/
@@ -944,12 +972,19 @@ figure.instagram-item img.insta-image {
     color: var(--light-gray-color);
 }
 
-    .social-links svg:hover {
-        color: var(--primary-color);
-    }
+.social-links svg:hover {
+    color: var(--primary-color);
+}
 
 .social-links li {
     padding-right: 30px;
+}
+
+.footer-logo {
+    max-width: 150px; /* hoặc 120px tuỳ bạn thấy đẹp */
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 
