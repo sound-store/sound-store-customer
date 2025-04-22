@@ -1,4 +1,9 @@
-﻿<header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var isLoggedIn = !string.IsNullOrEmpty(HttpContextAccessor.HttpContext?.Session.GetString("AccessToken"));
+}
+
+<header id="header" class="site-header header-scrolled position-fixed text-black bg-light">
     <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
         <div class="container-fluid">
             <a class="navbar-brand logo-wrapper d-flex align-items-center" asp-page="/Index">
@@ -43,7 +48,7 @@
                                         </a>
                                     </li>
                                     <li class="pe-3">
-                                        <a href="#">
+                                        <a asp-page="@(isLoggedIn ? "/UserProfile" : "/Login")">
                                             <svg class="user">
                                                 <use xlink:href="#user"></use>
                                             </svg>
