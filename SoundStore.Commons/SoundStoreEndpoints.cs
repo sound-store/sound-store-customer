@@ -16,5 +16,10 @@
         /// Sample endpoint: https://localhost:7094/api/sound-store/users/login
         /// </summary>
         public const string LoginEndpoint = _devBaseUrl + "users/login";
+
+        /// <summary>
+        /// Get categories
+        /// </summary>
+        public const string GetCategories = _devBaseUrl + "categories";
     }
 }

@@ -1,0 +1,9 @@
+﻿@using SoundStore.Commons.Responses
+@model List<CategoryResponse>
+
+@foreach (var category in Model)
+{
+    <li class="nav-item">
+        <a class="nav-link me-4" href="#">@category.Name</a>
+    </li>
+}
