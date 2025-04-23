@@ -40,5 +40,8 @@
                 <a asp-page="/Register" class="text-primary text-decoration-underline fw-semibold">Sign up</a>
             </p>
         </form>
+
+        @* Display error message here *@
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger text-start rounded-3 py-2 px-3 small"></div>
     </div>
 </div>
