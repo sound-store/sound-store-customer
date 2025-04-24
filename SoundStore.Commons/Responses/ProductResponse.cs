@@ -38,7 +38,14 @@
 
         public string? Status { get; set; }
 
+        /// <summary>
+        /// Average rating score of a product
+        /// </summary>
+        public decimal OverallRatingScore { get; set; }
+
         public ICollection<ProductImage> Images { get; set; } = [];
+
+        public ICollection<RatingResponse> RatingResponses { get; set; } = [];
     }
 
     public class ProductImage

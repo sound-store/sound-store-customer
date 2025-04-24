@@ -21,5 +21,11 @@
         /// Get categories
         /// </summary>
         public const string GetCategories = _devBaseUrl + "categories";
+
+        /// <summary>
+        /// Get product by id
+        /// Sample endpoint: https://localhost:7094/api/sound-store/products/100
+        /// </summary>
+        public const string GetProductById = _devBaseUrl + "products/";
     }
 }

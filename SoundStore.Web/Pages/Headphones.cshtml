@@ -19,8 +19,9 @@
             @foreach (var product in Model.Headphones.Items)
             {
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a asp-page="/ProductDetail" asp-route-productId="@product.Id" class="text-decoration-none"></a>
-                    @await Html.PartialAsync("_ProductCard", product)
+                    <a asp-page="/ProductDetail" asp-route-productId="@product.Id" class="text-decoration-none">
+                        @await Html.PartialAsync("_ProductCard", product)
+                    </a>
                 </div>
             }
         </div>
