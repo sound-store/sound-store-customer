@@ -1,18 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SoundStore.Commons.Responses;
 using SoundStore.Commons;
+using SoundStore.Commons.Responses;
 using System.Text.Json;
 
 namespace SoundStore.Web.Pages
 {
-    public class HeadphonesModel(ILogger<HeadphonesModel> logger,
-        IHttpClientFactory httpClientFactory) : PageModel
+    public class SpeakerModel(IHttpClientFactory httpClientFactory,
+        ILogger<SpeakerModel> logger) : PageModel
     {
-        private readonly ILogger<HeadphonesModel> _logger = logger;
         private readonly IHttpClientFactory _httpClientFactory = httpClientFactory;
+        private readonly ILogger _logger = logger;
 
-        public PaginatedList<ProductResponse> Headphones { get; set; } = new PaginatedList<ProductResponse>();
+        public PaginatedList<ProductResponse> Speakers { get; set; } = new PaginatedList<ProductResponse>();
 
         public int CurrentPage { get; set; }
 
@@ -40,7 +40,7 @@ namespace SoundStore.Web.Pages
 
                 var stream = await response.Content.ReadAsStreamAsync();
                 var result = await JsonSerializer.DeserializeAsync<ApiResponse<PaginatedList<ProductResponse>>>(stream, options);
-                Headphones = result!.Value!;
+                Speakers = result!.Value!;
 
                 return Page();
             }

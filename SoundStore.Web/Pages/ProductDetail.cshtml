@@ -1,0 +1,106 @@
+﻿@page
+@model SoundStore.Web.Pages.ProductDetailModel
+@{
+    ViewData["Title"] = "Details";
+}
+<!-- Code for product detail page -->
+
+<div class="container" style="padding-top: calc(72px + 2rem);">
+    <!-- Adjust based on header height -->
+    
+    <!-- Product Detail Section -->
+    <div class="row mb-5">
+        <!-- Left: Images -->
+        <div class="col-md-6 mb-4">
+            <img src="/images/sample-product.jpg" class="img-fluid rounded w-100 mb-3" alt="Product Image">
+            <div class="d-flex gap-2">
+                <img src="/images/thumb1.jpg" class="img-thumbnail" style="width: 80px; height: 80px;" />
+                <img src="/images/thumb2.jpg" class="img-thumbnail" style="width: 80px; height: 80px;" />
+                <img src="/images/thumb3.jpg" class="img-thumbnail" style="width: 80px; height: 80px;" />
+            </div>
+        </div>
+
+        <!-- Right: Product Info -->
+        <div class="col-md-6">
+            <h2>SoundMax Pro X7</h2>
+            <p class="text-muted">Wireless Noise-Cancelling Headphones</p>
+
+            <div class="mb-2">
+                <span class="text-warning">★★★★☆</span>
+                <span class="text-muted">(128 reviews)</span>
+            </div>
+
+            <h4 class="text-danger fw-bold">5.190.000₫</h4>
+            <p class="text-success">In stock – ships in 24h</p>
+
+            <p class="text-muted">
+                Experience premium sound quality with the SoundMax Pro X7 wireless headphones. Featuring advanced noise-cancellation and 30-hour battery life.
+            </p>
+
+            <ul class="list-unstyled mb-4">
+                <li>✔ Active Noise Cancellation</li>
+                <li>✔ Bluetooth 5.2</li>
+                <li>✔ 30-hour Battery</li>
+                <li>✔ Quick Charge (5 min = 3 hours playback)</li>
+            </ul>
+
+            <form class="d-flex gap-2 mb-3">
+                <input type="number" class="form-control w-25" value="1" min="1" max="10" />
+                <button class="btn btn-danger">Add to Cart</button>
+                <button class="btn btn-outline-secondary">♡ Wishlist</button>
+            </form>
+
+            <p><strong>SKU:</strong> SM-PRO-X7-BLK</p>
+            <p><strong>Brand:</strong> SoundMax</p>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="border-top pt-5">
+        <h3 class="mb-4">Customer Reviews</h3>
+        <div class="row mb-4">
+            <div class="col-md-3 text-center">
+                <h1 class="display-4 fw-bold">4.7</h1>
+                <div class="text-warning fs-4">★★★★☆</div>
+                <p class="text-muted">Based on 128 reviews</p>
+            </div>
+            <div class="col-md-9">
+                @{
+                    var ratings = new Dictionary<int, int> { { 5, 75 }, { 4, 20 }, { 3, 5 }, { 2, 0 }, { 1, 0 } };
+                }
+                @foreach (var r in ratings)
+                {
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="me-2">@r.Key★</span>
+                        <div class="progress flex-grow-1 me-2" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: @r.Value%"></div>
+                        </div>
+                        <small>@r.Value%</small>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Hardcoded Reviews -->
+        <div class="d-flex flex-column gap-4">
+            <div class="border rounded p-3">
+                <div class="d-flex justify-content-between">
+                    <strong>Michael Johnson</strong>
+                    <div class="text-warning">★★★★★</div>
+                </div>
+                <div class="text-muted">June 15, 2023</div>
+                <p class="mt-2">Incredible noise cancellation and battery life. Totally worth it.</p>
+            </div>
+            <div class="border rounded p-3">
+                <div class="d-flex justify-content-between">
+                    <strong>Sarah Williams</strong>
+                    <div class="text-warning">★★★★☆</div>
+                </div>
+                <div class="text-muted">May 28, 2023</div>
+                <p class="mt-2">Great sound but a bit tight fit. Battery is strong.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

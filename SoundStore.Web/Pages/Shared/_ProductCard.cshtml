@@ -1,9 +1,9 @@
 ﻿@using SoundStore.Commons.Responses
 @model ProductResponse
 
-<div class="card shadow-sm border-0 rounded-4 text-center" style="max-width: 300px;">
+<div class="card h-100 shadow-sm border-0 rounded-4 text-center d-flex flex-column" style="max-width: 300px;">
     <img src="@Model.Images.FirstOrDefault()?.ImageUrl" alt="@Model.Name" class="card-img-top rounded-3">
-    <div class="card-body">
+    <div class="card-body flex-grow-1 justify-content-between">
         <div class="text-uppercase text-muted small fw-semibold mt-2" style="letter-spacing: 1px;">
             @Model.CategoryName
         </div>

@@ -55,7 +55,7 @@
             <div class="display-header d-flex justify-content-between pb-3">
                 <h2 class="display-7 text-dark text-uppercase">LOA MARSHALL</h2>
                 <div class="btn-right">
-                    <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+                    <a asp-page="/Speakers" asp-route-categoryId="1" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
                 </div>
             </div>
             <div class="swiper product-swiper">
@@ -63,8 +63,12 @@
                     @foreach (var item in Model.Speakers)
                     {
                         <div class="swiper-slide d-flex justify-content-center">
-                            @await Html.PartialAsync("_ProductCard", item)
+                            <a asp-page="/ProductDetail" asp-route-productId="@item.Id" class="text-decoration-none">
+                                @await Html.PartialAsync("_ProductCard", item)
+                            </a>
                         </div>
+                        <a asp-page="/ProductDetail" asp-route-productId="">
+                        </a>
                     }
                 </div>
             </div>
@@ -73,14 +77,14 @@
     <div class="swiper-pagination position-absolute text-center"></div>
 </section>
 
-<!-- Headphone featured products -->
+<!-- Featured headphones -->
 <section id="smart-watches" class="product-store padding-large position-relative">
     <div class="container">
         <div class="row">
             <div class="display-header d-flex justify-content-between pb-3">
                 <h2 class="display-7 text-dark text-uppercase">TAI NGHE MARSHALL</h2>
                 <div class="btn-right">
-                    <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+                    <a asp-page="/Headphones" asp-route-categoryId="2" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
                 </div>
             </div>
             <div class="swiper product-watch-swiper">
@@ -88,7 +92,9 @@
                     @foreach (var item in Model.Headphones)
                     {
                         <div class="swiper-slide d-flex justify-content-center">
-                            @await Html.PartialAsync("_ProductCard", item)
+                            <a asp-page="/ProductDetail" asp-route-productId="@item.Id" class="text-decoration-none">
+                                @await Html.PartialAsync("_ProductCard", item)
+                            </a>
                         </div>
                     }
                 </div>

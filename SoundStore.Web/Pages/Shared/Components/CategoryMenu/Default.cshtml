@@ -1,9 +1,20 @@
 ﻿@using SoundStore.Commons.Responses
 @model List<CategoryResponse>
 
+@{
+    // Define category ID to route mapping
+    var categoryRoutes = new Dictionary<int, string>
+    {
+        { 1, "/Speakers" },
+        { 2, "/Headphones" },
+        { 3, "/Accessories" },
+        { 8, "#" }
+    };
+}
 @foreach (var category in Model)
 {
+    var link = categoryRoutes.ContainsKey(category.Id) ? categoryRoutes[category.Id] : "#";
     <li class="nav-item">
-        <a class="nav-link me-4" href="#">@category.Name</a>
+        <a class="nav-link me-4" asp-page="@link" asp-route-categoryId="@category.Id">@category.Name</a>
     </li>
 }

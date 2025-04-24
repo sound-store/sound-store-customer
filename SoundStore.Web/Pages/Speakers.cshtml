@@ -1,50 +1,52 @@
 ﻿@page
-@model SoundStore.Web.Pages.HeadphonesModel
+@model SoundStore.Web.Pages.SpeakerModel
 @{
-    ViewData["Title"] = "Tai nghe Marshall";
+    ViewData["Title"] = "Loa Marshall";
 }
+
 <!-- Hero Banner -->
-<section class="hero-banner position-relative text-white text-center" style="height: 80vh; background: url('https://soundway.vn/wp-content/uploads/2025/01/tai-nghe-marshall-background-scaled.webp') center center / cover no-repeat;">
+<section class="hero-banner position-relative text-white text-center" style="height: 80vh; background: url('https://soundway.vn/wp-content/uploads/2025/01/Loa-Marshall-background-scaled.webp') center center / cover no-repeat;">
     <div class="position-absolute top-50 start-50 translate-middle">
-        <h1 class="display-4 fw-bold">TAI NGHE MARSHALL</h1>
-        <p class="lead fw-semibold text-white">Khám phá tai nghe Marshall chất lượng cao của chúng tôi</p>
+        <h1 class="display-4 fw-bold">LOA MARSHALL</h1>
+        <p class="lead fw-semibold text-white">Khám phá loa Marshall chất lượng cao của chúng tôi</p>
     </div>
 </section>
 
-<!-- Headphones Grid -->
+<!-- Speakers Grid -->
 <section class="products-container mt-3">
     <div class="container">
         <div class="row g-4">
             @* Inject each product in the card *@
-            @foreach (var product in Model.Headphones.Items)
+            @foreach (var product in Model.Speakers.Items)
             {
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a asp-page="/ProductDetail" asp-route-productId="@product.Id" class="text-decoration-none"></a>
-                    @await Html.PartialAsync("_ProductCard", product)
+                    <a asp-page="/ProductDetail" asp-route-productId="@product.Id" class="text-decoration-none">
+                        @await Html.PartialAsync("_ProductCard", product)
+                    </a>
                 </div>
             }
         </div>
 
         <!-- Pagination (Simple Buttons) -->
         @* 
-            @if (Model.Headphones.TotalPages > 1)
+            @if (Model.Speakers.TotalPages > 1)
             {
                 <div class="d-flex justify-content-center">
                     <nav>
                         <ul class="pagination">
-                            @if (Model.Headphones.HasPreviousPage)
+                            @if (Model.Speakers.HasPreviousPage)
                             {
                                 <li class="page-item">
                                     <a class="page-link"
                                        asp-page="/Speakers"
                                        asp-route-categoryId="@Request.Query["categoryId"]"
-                                       asp-route-pageNumber="@(Model.Headphones.PageNumber - 1)">Previous</a>
+                                       asp-route-pageNumber="@(Model.Speakers.PageNumber - 1)">Previous</a>
                                 </li>
                             }
 
-                            @for (int i = 1; i <= Model.Headphones.TotalPages; i++)
+                            @for (int i = 1; i <= Model.Speakers.TotalPages; i++)
                             {
-                                <li class="page-item @(i == Model.Headphones.PageNumber ? "active" : "")">
+                                <li class="page-item @(i == Model.Speakers.PageNumber ? "active" : "")">
                                     <a class="page-link"
                                        asp-page="/Speakers"
                                        asp-route-categoryId="@Request.Query["categoryId"]"
@@ -52,13 +54,13 @@
                                 </li>
                             }
 
-                            @if (Model.Headphones.HasNextPage)
+                            @if (Model.Speakers.HasNextPage)
                             {
                                 <li class="page-item">
                                     <a class="page-link"
                                        asp-page="/Speakers"
                                        asp-route-categoryId="@Request.Query["categoryId"]"
-                                       asp-route-pageNumber="@(Model.Headphones.PageNumber + 1)">Next</a>
+                                       asp-route-pageNumber="@(Model.Speakers.PageNumber + 1)">Next</a>
                                 </li>
                             }
                         </ul>
@@ -68,3 +70,4 @@
         *@
     </div>
 </section>
+

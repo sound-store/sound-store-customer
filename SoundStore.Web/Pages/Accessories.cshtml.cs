@@ -6,13 +6,13 @@ using System.Text.Json;
 
 namespace SoundStore.Web.Pages
 {
-    public class HeadphonesModel(ILogger<HeadphonesModel> logger,
-        IHttpClientFactory httpClientFactory) : PageModel
+    public class AccessoriesModel(IHttpClientFactory httpClientFactory,
+        ILogger<AccessoriesModel> logger) : PageModel
     {
-        private readonly ILogger<HeadphonesModel> _logger = logger;
         private readonly IHttpClientFactory _httpClientFactory = httpClientFactory;
+        private readonly ILogger<AccessoriesModel> _logger = logger;
 
-        public PaginatedList<ProductResponse> Headphones { get; set; } = new PaginatedList<ProductResponse>();
+        public PaginatedList<ProductResponse> Accessories { get; set; } = new PaginatedList<ProductResponse>();
 
         public int CurrentPage { get; set; }
 
@@ -40,7 +40,7 @@ namespace SoundStore.Web.Pages
 
                 var stream = await response.Content.ReadAsStreamAsync();
                 var result = await JsonSerializer.DeserializeAsync<ApiResponse<PaginatedList<ProductResponse>>>(stream, options);
-                Headphones = result!.Value!;
+                Accessories = result!.Value!;
 
                 return Page();
             }
