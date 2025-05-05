@@ -1,0 +1,60 @@
+﻿@page
+@model SoundStore.Web.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container" style="padding-top: 120px;">
+    <h2 class="mb-4">User Profile</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <tbody>
+                <tr>
+                    <th scope="row" style="width: 200px;">First name</th>
+                    <td>
+                        <input type="text" class="form-control" value="@Model.User.FirstName">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" style="width: 200px;">Last name</th>
+                    <td>
+                        <input type="text" class="form-control" value="@Model.User.LastName">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>
+                        <span class="form-control-plaintext">@Model.User.Email</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td>
+                        <span class="form-control-plaintext">@Model.User.PhoneNumber</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Address</th>
+                    <td>
+                        <input type="text" class="form-control" value="@Model.User.Address">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Date of Birth</th>
+                    <td>
+                        <input type="date" class="form-control" value="@Model.User.DateOfBirth">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <form method="post" asp-page-handler="Logout">
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+        <button type="button" class="btn btn-primary">Update Information</button>
+    </div>
+</div>
+

@@ -27,5 +27,10 @@
         /// Sample endpoint: https://localhost:7094/api/sound-store/products/100
         /// </summary>
         public const string GetProductById = _devBaseUrl + "products/";
+
+        /// <summary>
+        /// Get user's information based on the token
+        /// </summary>
+        public const string GetMe = _devBaseUrl + "users/me";
     }
 }

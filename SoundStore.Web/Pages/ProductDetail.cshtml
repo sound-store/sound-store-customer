@@ -29,7 +29,9 @@
 
             <div class="mb-2">
                 @{
-                    var rating = (int)Math.Round(Model.Product.OverallRatingScore);
+                    var rating = Model.Product.OverallRatingScore.HasValue
+                    ? (int)Math.Round(Model.Product.OverallRatingScore.Value)
+                    : 0;
                 }
                 <span class="text-warning">
                     @for (int i = 1; i <= 5; i++)
@@ -91,10 +93,16 @@
 
         <div class="row mb-4">
             <div class="col-md-3 text-center">
-                <h1 class="display-4 fw-bold">@Model.Product.OverallRatingScore.ToString("0.0")</h1>
+                <h1 class="display-4 fw-bold">
+                    @(Model.Product.OverallRatingScore.HasValue
+                        ? Model.Product.OverallRatingScore.Value.ToString("0.0")
+                        : "0.0")
+                </h1>
                 <div class="text-warning fs-4">
                     @{
-                        var avgRating = (int)Math.Round(Model.Product.OverallRatingScore);
+                        var avgRating = Model.Product.OverallRatingScore.HasValue
+                        ? (int)Math.Round(Model.Product.OverallRatingScore.Value)
+                        : 0;
                         for (int i = 1; i <= 5; i++)
                         {
                             @Html.Raw(i <= avgRating ? "★" : "☆")
